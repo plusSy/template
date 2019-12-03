@@ -2,6 +2,7 @@
 <template>
   <div class="index-wrap">
     {{ data.pageName }}
+    <TestCom />
   </div>
 </template>
 

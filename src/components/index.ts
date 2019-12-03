@@ -1,5 +1,5 @@
-import TestCom from './test.vue';
-import HelloCom from './hello.vue';
+import HelloCom from './hello/hello.vue';
+import TestCom from './test/test.vue';
 
 export {
   TestCom,

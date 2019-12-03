@@ -1,6 +1,6 @@
 
 <template>
-  <div class="hello">
+  <div class="hello-wrap">
     {{ data.pageName }}
   </div>
 </template>

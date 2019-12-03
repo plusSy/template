@@ -46,8 +46,8 @@ const StyleTemplate = `
 // script template
 const ScriptTemplate = `
 import { Vue, Component } from 'vue-property-decorator';
-import { ${capPireName}Data } from '@/types/views/${dirName}.interface.ts';
-// import {} from '@/componets';
+import { ${capPireName}Data } from '@/types/views/${dirName}.interface';
+// import {} from '@/components';
 
 @Component({})
 export default class ${capPireName}Tpl extends Vue {

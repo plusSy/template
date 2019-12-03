@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "tpl": "node scripts/template.js"
+    "tpl": "node scripts/template.js",
+    "com": "node scripts/component.js"
   },
   "dependencies": {
     "chalk": "^3.0.0",
