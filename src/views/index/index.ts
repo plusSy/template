@@ -1,10 +1,7 @@
 
 import { Vue, Component } from 'vue-property-decorator';
-// import {} from '@/componets'
-
-interface IndexData {
-  pageName: string
-}
+import { IndexData } from '@/types/views/index.interface';
+// import {} from '@/componets';
 
 @Component({})
 export default class IndexTpl extends Vue {

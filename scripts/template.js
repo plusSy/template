@@ -46,11 +46,8 @@ const StyleTemplate = `
 // script template
 const ScriptTemplate = `
 import { Vue, Component } from 'vue-property-decorator';
-// import {} from '@/componets'
-
-interface ${capPireName}Data {
-  pageName: string
-}
+import { ${capPireName}Data } from '@/types/views/${dirName}.interface.ts';
+// import {} from '@/componets';
 
 @Component({})
 export default class ${capPireName}Tpl extends Vue {
@@ -58,6 +55,14 @@ export default class ${capPireName}Tpl extends Vue {
   data: ${capPireName}Data = {
     pageName: '${dirName}',
   }
+}
+`;
+
+// interface template
+const interfaceTemplate = `
+// ${dirName}.Data 类型
+export interface ${capPireName}Data {
+  pageName: string
 }
 `;
 
@@ -73,5 +78,12 @@ fs.writeFileSync(`${dirName}.ts`, ScriptTemplate);
 fs.writeFileSync(`${dirName}.scss`, StyleTemplate);
 
 console.log(chalk.green('模板创建成功!'));
+
+// create interfaceData
+process.chdir(`${basePath}/types/views`);
+
+fs.writeFileSync(`${dirName}.interface.ts`, interfaceTemplate);
+
+console.log(chalk.green('Interface 文件创建成功!'));
 
 process.exit(0);
